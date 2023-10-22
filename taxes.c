@@ -6,7 +6,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
   double agi = 0.0;
   char c = 'N';
@@ -30,17 +31,16 @@ int main(int argc, char **argv) {
 
   //TODO: compute the tax, child credit, and total tax here
   if (agi>0 && agi<=19900)
-  {
     tax=0.1*agi;
-    if (agi>19900 && agi<=81050)
+    else if (agi>19900 && agi<=81050)
     {
       tax=(0.12*agi)+1990;
     }
-    else if (agi>81050 && agi<=172750)
+    else if (agi>81050 && agi<=172751)
     {
       tax=(0.22*agi)+9328;
     }
-    else if (agi>172750 && agi<= 329850)
+    else if (agi>172751 && agi<= 329850)
     {
       tax=(0.24*agi)+29502;
     }
@@ -65,7 +65,7 @@ int main(int argc, char **argv) {
     }
     totalTax=tax+childCredit;
     
-  }
+  
   
 
   printf("AGI:          $%10.2f\n", agi);
